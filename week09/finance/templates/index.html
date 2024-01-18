@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Wallet
+{% endblock %}
+
+{% block main %}
+    <div class="container text-center">
+        {% if wallet %}
+            <div class="mb-3">
+                <h1 class="fw-bold">Your Wallet💰</h1>
+            </div>
+            <br>
+
+            <!-- Stocks Owned Table -->
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Stock</th>
+                        <th scope="col">Number of Shares</th>
+                        <th scope="col">Current Price</th>
+                        <th scope="col">Current Total Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for stock in wallet %}
+                        <tr>
+                            <td>{{ stock["stock_name"].upper() }}</td>
+                            <td>{{ stock["shares"] | int }}</td>
+                            <td>{{ stock["price"] }}</td>
+                            <td>{{ stock["total"] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <!-- Balance and Total Table -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Balance (Free To Invest)</th>
+                        <th scope="col">Total (Balance + Shares)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-success">
+                        <td>{{ cash }}</td>
+                        <td>{{ grandtotal }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+        {% else %}
+            <div class="mb-5">
+                <h3>Your wallet is empty!</h3>
+                <p class="lead">Start building your portfolio by buying some stocks.</p>
+            </div>
+            <p class="lead">Available Cash: {{ cash }}</p>
+        {% endif %}
+
+        <div class="row mt-5">
+            <div class="col">
+                <form action="/buy" method="post" class="mb-3">
+                    <h3 class="fw-bold">Quick Buy📈</h3>
+                    <div class="mb-3">
+                        <label for="buy-symbol" class="form-label">Stock Symbol:</label>
+                        <input id="buy-symbol" name="symbol" placeholder="Enter Stock Symbol" type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="buy-shares" class="form-label">Number of Shares:</label>
+                        <input id="buy-shares" name="shares" placeholder="Enter Number of Shares" type="number" min="1" class="form-control">
+                    </div>
+                    <button class="btn btn-success" name="submit" type="submit">Buy</button>
+                </form>
+            </div>
+            <div class="col">
+                <form action="/sell" method="post" class="mb-3">
+                    <h3 class="fw-bold">Quick Sell📉</h3>
+                    <div class="mb-3">
+                        <label for="sell-symbol" class="form-label">Select Stock:</label>
+                        <select class="form-select mb-3" name="symbol" id="sell-symbol" required>
+                            <option value="" selected>Select Stock</option>
+                            {% for symbol in wallet %}
+                                <option value="{{ symbol["stock_name"].upper() }}">{{ symbol["stock_name"].upper() }} - ({{ symbol["shares"] | int }} shares) - {{ symbol["price"] }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="sell-shares" class="form-label">Number of Shares:</label>
+                        <input id="sell-shares" name="shares" placeholder="Enter Number of Shares" type="number" min="1" class="form-control">
+                    </div>
+                    <button class="btn btn-success" name="submit" type="submit">Sell</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,318 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  padding: 0;
+  background-color: #272822;
+  color: #F8F8F2;
+}
+
+video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+
+#header {
+  background-color: #272822;
+  padding: 20px;
+  text-align: center;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+#header a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #F8F8F2;
+  font-weight: bold;
+  display: inline-block;
+}
+
+#content {
+  text-align: center;
+}
+
+.welcome-message {
+  margin: 0, 50px;
+  background-color: #757575;
+  border: 1px solid #75715E;
+  text-align: center;
+  padding: 20px;
+  max-width: 60%;
+  max-height: 45%;
+  animation: fade-in 1.5s ease-in-out forwards;
+  border-radius: 8px;
+  color: #F8F8F2;
+  position: fixed;
+  top: 30%;
+  left: 35.5%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.welcome-text {
+  margin: 10px;
+  background-color: #757575;
+  border: 1px solid #75715E;
+  text-align: inherit;
+  padding: 20px;
+  max-width: 60%;
+  max-height: 45%;
+  animation: fade-in 3s ease-in-out forwards;
+  border-radius: 8px;
+  color: #F8F8F2;
+  position: fixed;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar {
+  background-color: #757575;
+  border-radius: 8px;
+  padding: 10px 20px;
+  width: calc(100% - 40px);
+  position: fixed;
+  margin: -25px 20px 0;
+  top: 6%;
+  z-index: 3;
+}
+
+.navbar-brand {
+  color: #757575;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: #757575;
+  text-align: center;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.float-image0 {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 2px;
+  border-radius: 8px;
+  max-width: 25%;
+  max-height: 25%;
+  position: absolute;
+  animation: fade-in 2.5s ease-in-out forwards;
+  top: 20%;
+  left: 18%;
+  z-index: 2;
+}
+
+.float-image1 {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 2px;
+  border-radius: 8px;
+  max-width: 25%;
+  max-height: 25%;
+  position: absolute;
+  animation: fade-in 2.9s ease-in-out forwards;
+  top: 20%;
+  left: 1.2%;
+  z-index: 2;
+}
+
+.float-image2 {
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 2px;
+  border-radius: 8px;
+  max-width: 65%;
+  max-height: 38%;
+  position: absolute;
+  animation: fade-in 4.2s ease-in-out forwards;
+  top: 60%;
+  right: 33%;
+  z-index: 2;
+}
+
+.float-image3 {
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 2px;
+  border-radius: 8px;
+  max-width: 65%;
+  max-height: 38%;
+  position: absolute;
+  animation: fade-in 4.5s ease-in-out forwards;
+  top: 60%;
+  right: 17%;
+  z-index: 2;
+}
+
+.float-image4 {
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 2px;
+  border-radius: 8px;
+  max-width: 65%;
+  max-height: 38%;
+  position: absolute;
+  animation: fade-in 4.9s ease-in-out forwards;
+  top: 60%;
+  right: 1%;
+  z-index: 2;
+}
+
+.my-life {
+  margin: 0, 50px;
+  background-color: #757575;
+  border: 1px solid #75715E;
+  text-align: inherit;
+  padding: 20px;
+  max-width: 50%;
+  max-height: 45%;
+  animation: fade-in 2s ease-in-out forwards;
+  border-radius: 8px;
+  color: #F8F8F2;
+  position: absolute;
+  top: 20%;
+  left: 48.7%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.my-life2 {
+  margin: 0 20px;
+  background-color: #757575;
+  border: 1px solid #75715E;
+  text-align: inherit;
+  padding: 20px;
+  max-width: 50%;
+  max-height: 45%;
+  animation: fade-in 4s ease-in-out forwards;
+  border-radius: 8px;
+  color: #F8F8F2;
+  position: absolute;
+  top: 60%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.project_message {
+  background-color: #757575;
+  border: 1px solid #75715E;
+  text-align: center;
+  padding: 20px;
+  max-width: 60%;
+  max-height: 45%;
+  animation: fade-in 1.5s ease-in-out forwards;
+  border-radius: 8px;
+  color: #F8F8F2;
+  position: absolute;
+  top: 17%;
+  left: 27.5%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.video-project1 {
+  background-color: #757575;
+  border: 1px solid #75715E;
+  padding: 20px;
+  animation: fade-in 3s ease-in-out forwards;
+  border-radius: 8px;
+  color: #F8F8F2;
+  transform: translate(-50%, -50%);
+  width: 720px;
+  height: 420px;
+  position: absolute;
+  top: 35%;
+  left: 27.2%;
+  z-index: 1;
+}
+
+.project_text {
+  background-color: #757575;
+  border: 1px solid #75715E;
+  text-align: inherit;
+  padding: 20px;
+  max-width: 60%;
+  max-height: 45%;
+  animation: fade-in 1.5s ease-in-out forwards;
+  border-radius: 8px;
+  color: #F8F8F2;
+  position: absolute;
+  top: 100%;
+  left: 21.5%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.my_image {
+  margin-bottom: 10px;
+  padding: 2px;
+  border-radius: 8px;
+  position: absolute;
+  animation: fade-in 1.5s ease-in-out forwards;
+  top: 20%;
+  left: 42%;
+  z-index: 2;
+}
+
+.my_name {
+  background-color: #757575;
+  border: 1px solid #75715E;
+  text-align: center;
+  padding: 6px;
+  max-width: 60%;
+  max-height: 45%;
+  border-radius: 8px;
+  color: #F8F8F2;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  position: absolute;
+  animation: fade-in 2s ease-in-out forwards;
+  left: 37.5%;
+  top: 58%;
+  z-index: 2;
+}
+
+.github {
+  animation: fade-in 3s ease-in-out forwards;
+  position: absolute;
+  left: 44%;
+  top: 67%;
+}
+.instagram {
+  animation: fade-in 3.3s ease-in-out forwards;
+  position: absolute;
+  left: 48.1%;
+  top: 68%;
+}
+
+.facebook {
+  animation: fade-in 3.6s ease-in-out forwards;
+  position: absolute;
+  left: 52%;
+  top: 68%;
+}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+    <div class="container text-center">
+        <div class="mb-5">
+            <h1 class="fw-bold">Buy Stocks 📈</h1>
+            <p class="lead">Enter the stock symbol and the number of shares you want to buy.</p>
+        </div>
+        <form action="/buy" method="post">
+            <div class="mb-3">
+                <label for="symbol" class="form-label">Stock Symbol:</label>
+                <input autofocus id="symbol" name="symbol" class="form-control" placeholder="Enter Stock Symbol" type="text" required>
+            </div>
+            <div class="mb-3">
+                <label for="shares" class="form-label">Number of Shares:</label>
+                <input id="shares" name="shares" class="form-control" placeholder="Enter Number of Shares" type="number" min="1" required>
+            </div>
+            <button class="btn btn-success" name="submit" type="submit">Buy</button>
+        </form>
+    </div>
+{% endblock %}

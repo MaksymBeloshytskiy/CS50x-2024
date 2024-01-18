@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Transaction History
+{% endblock %}
+
+{% block main %}
+    <h1 class="fw-bold">Transaction History 📜</h1>
+    <br>
+
+    {% if history is none %}
+        <p>No transactions yet.</p>
+    {% else %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Stock</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                    <th>Units</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for transaction in history %}
+                    <tr class="{% if transaction.tran_type == 'bought' %}table-success{% elif transaction.tran_type == 'sold' %}table-danger{% endif %}">
+                        <td>{{ transaction.stock_name }}</td>
+                        <td>{{ transaction.tran_type }}</td>
+                        <td>{{ transaction.price }}</td>
+                        <td>{{ transaction.units | int }}</td>
+                        <td>{{ transaction.date }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+{% endblock %}

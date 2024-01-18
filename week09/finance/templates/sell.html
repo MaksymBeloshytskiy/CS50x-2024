@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <div class="container text-center">
+        <div class="mb-5">
+            <h1 class="fw-bold">Sell Stocks 📉</h1>
+            <p class="lead">Select the stock you want to sell and enter the number of shares to sell.</p>
+        </div>
+        <form action="/sell" method="post">
+            <div class="mb-3">
+                <label for="symbol" class="form-label">Select Stock:</label>
+                <select class="form-select" name="symbol" id="symbol" required>
+                    <option selected disabled value="empty">Select</option>
+                    {% for symbol in wallet %}
+                        <option value="{{ symbol["stock_name"].upper() }}">{{ symbol["stock_name"].upper() }} - ({{ symbol["shares"] | int }} shares) - ${{ symbol["price"] }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="shares" class="form-label">Number of Shares:</label>
+                <input id="shares" name="shares" class="form-control" placeholder="Enter Number of Shares" type="number" min="1" required>
+            </div>
+            <button class="btn btn-success" name="submit" type="submit">Sell</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <title>My Webpage</title>
+</head>
+<body>
+    <header>
+        <div class="video-wrapper">
+            <video playsinline autoplay muted loop poster="videos/main.mp4">
+              <source src="videos/main.mp4" type="video/mp4">
+            </video>
+          </div>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container">
+                        <a class="navbar-brand" href="index.html">My Webpage</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about_me.html">Про мене</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="projects.html">Мої проекти</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="info.html">Контактна інформація</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+    </header>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="project_message">
+                    <h1><strong>Project: "Travel to Grandma"</strong></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="video-project1">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/8klzG-YZCyY" title="Travel to Grandma" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="true"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="project_text">
+                    <p>Цей проект був створений під час Марафону від Кампусу "ХПІ" командою з 6 розробників включаючи мене як тім ліда. Гра представляє історію історію про маленьку дівчинку, яка повинна дістатись до бабусі через ліс та велику кількість пригод. Нажаль, цей проект не був закінчений в зв'язку із навчанням, проте за щедру винагороду команда "Happy Skulls" готова реалізувати даний проект на raylib до кінця😁</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

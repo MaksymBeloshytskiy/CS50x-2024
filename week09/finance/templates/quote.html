@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quotes
+{% endblock %}
+
+{% block main %}
+    <div class="container text-center">
+        <div class="mb-5">
+            <h1 class="fw-bold">Get Stock Quotes 📊</h1>
+            <p class="lead">Enter the stock symbol below to get the latest quote.</p>
+        </div>
+        <form action="/quote" method="post">
+            <div class="mb-3">
+                <label for="quote" class="form-label">Stock Symbol:</label>
+            </div>
+            <div class="mb-3">
+                <input autofocus id="symbol" name="symbol" class="form-control" placeholder="Enter Stock Symbol" type="text" required>
+            </div>
+            <button class="btn btn-success" name="submit" type="submit">Get Quote</button>
+        </form>
+    </div>
+{% endblock %}
